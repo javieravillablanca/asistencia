@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+  font-family: "Nunito", sans-serif;
+}
+
+
+#logoopc{
+    position: absolute;
+    left: 320px;
+    font-size: 2rem;
+    color: var(--logocredencial);
+}
+
+.contenedorSec{
+    background-color: var(--fondosec);
+    align-content: flex-end; 
+    color: #fff;
+    justify-items: center;
+    height: 50px;
+
+}
+
+h6{
+    display: flex;
+   
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+.lineaSeparadora{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #f7f5f5;
+}
+
+#logoMenu{
+    position: absolute;
+    left: 370px;
+    font-size: 2rem;
+  
+}
+
+#logo2{
+    
+    font-size: 1.5rem;
+    color: #000;
+}
+
+p{
+    margin-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #3c932a;
+    width: 90%;
+    margin: 2vh 0;
+    text-align: center;
+    margin-left: 20px;
+}
+
+th {
+    border: 1px solid #000 !important; 
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    background-color: var(--th);
+}
+td{
+    border: 1px solid #000 !important; 
+    text-align: center;
+    padding: 5px;
+    color: #000;
+    background-color: var(--table);
+
+}
+
+.footer{
+    background-color: var(--colorfooter);
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    color: white;
+}
+  
+.footer p{
+    color: white;
+
+}
+
+#contres{
+  color: var(--contres);
+}
+
+p{
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+.lineaSeparadora2{
+    display: flex;
+    margin: 0 auto;
+    width: 87%;
+    border-bottom: 1px solid #6e0202;
+}
+
+.imagen{
+    width: 100%;
+    height: 20%;
+}
+
+.imagen img{
+    width: 100%;
+    height: 100%;
+}

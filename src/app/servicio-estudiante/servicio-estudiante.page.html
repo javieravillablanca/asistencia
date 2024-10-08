@@ -1,0 +1,67 @@
+<ion-content [fullscreen]="true">
+  <div class="contenedor">
+
+    
+    <ion-menu menuId="first-menu" contentId="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-item routerLink="/home">Inicio</ion-item>
+        <ion-item routerLink="/login">Cerrar sesión</ion-item>
+      </ion-content>
+    </ion-menu>
+
+    
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            
+            <ion-menu-button autoHide="false"></ion-menu-button>
+          </ion-buttons>
+          <ion-title id="contres" style="width: fit-content; font-weight: 500;">RegistrApp</ion-title>
+          
+          <ion-icon slot="end"  id="logoopc" src="/assets/icon/user.svg" alt="Logo" routerLink="/credencial"></ion-icon>
+          
+        </ion-toolbar>
+      </ion-header>
+      <ion-content >
+        <div class="imagen">
+          <img src="assets/img/universitarios.png" alt="FondoInicio">
+        </div>
+
+          <div class="contenedorSec">
+            <h6>Servicio al Estudiante</h6>
+            <div class="lineaSeparadora"></div>
+          </div>
+
+          <form>
+            <label for="matricula">Matrícula:</label>
+            <select id="matricula" name="matricula" required>
+              <option value="ingenieria_informatica">Ingeniería en Informática</option>
+          </select>
+        
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Seleccione una categoría</option>
+                <option value="categoria1">Académico</option>
+                <option value="categoria2">Financiamiento</option>
+            </select>
+        
+            <label for="servicio">Servicio:</label>
+            <input type="text" id="servicio" name="servicio" required>
+        
+            <label for="comentarios">Comentarios (máximo 1000 caracteres):</label>
+            <textarea id="comentarios" name="comentarios" maxlength="1000" rows="5" required></textarea>
+        
+            <button type="submit" class="submit-btn" style="background-color: #000000;">Enviar</button>
+            <button type="button" class="cancel-btn" style="background-color: #bec0c5;" >Cancelar</button>
+        </form>
+          
+        <div class="footer">
+          <p>RegistrApp Todos los derechos</p>    
+        </div>
+</ion-content>

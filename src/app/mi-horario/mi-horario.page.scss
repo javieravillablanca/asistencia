@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+  font-family: "Nunito", sans-serif;
+}
+
+ion-content {
+    --background: #f4f4f4;
+}
+  
+.contenedor {
+    padding: 0 16px;
+}
+  
+
+
+#logoopc{
+    position: absolute;
+    left: 320px;
+    font-size: 2rem;
+    color: var(--logocredencial);
+}
+
+#logoMenu{
+    position: absolute;
+    left: 370px;
+    font-size: 2rem;
+  
+}
+
+#contres{
+    color: var(--contres);
+  }
+
+#logo2{
+    
+    
+    font-size: 1.5rem;
+    color: #000;
+}
+
+
+
+
+.contenedorSec{
+    background-color: var(--conten2);
+    align-content: flex-end;
+    color: #fff;
+    justify-items: center;
+    height: 50px;
+
+}
+
+h6{
+    display: flex;
+    
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+.textto{
+    color: #000;
+}
+
+.lineaSeparadora{
+    display: flex;
+    margin: 0 auto;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    margin-bottom: 10px;
+   
+  
+}
+
+.table-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;   
+    flex-direction: column;
+    gap: 20px;
+   
+}
+.table-container div {
+    border: 1px solid #ccc;
+    
+    border-radius: 5px;
+    background-color: var(--table-container);
+}
+.table-container div h3 {
+    margin-top: 0;
+}
+@media (max-width: 600px) {
+    .table-container {
+        background-color: var(--colorfondotabla);
+        grid-template-columns: 1fr; /* Columna única en pantallas pequeñas */
+    }
+}
+
+.footer{
+    background-color: var(--colorfooter);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    margin-bottom: 10px;
+    height: 130px;
+    color: #fff;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 0.8rem;
+    
+}
+
+p{
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    align-self: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.lineaSeparadora2{
+    display: flex;
+    margin: 0 auto;
+    width: 87%;
+    border-bottom: 1px solid #f6f5f5;
+   
+  
+}
+
+
+
+.imagen{
+    width: 100%;
+    height: 20%;
+}
+
+.imagen img{
+    width: 100%; 
+    height: 100%;
+}
+
+
+.day {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+
+.day h6 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: var(--dayh6);
+}
+
+.schedule p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: var(--scechule);
+}
+

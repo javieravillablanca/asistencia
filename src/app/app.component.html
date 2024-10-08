@@ -1,3 +1,22 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- Menú lateral global -->
+  <ion-menu menuId="first-menu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar class="custom-toolbar">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-item routerLink="/home">Inicio</ion-item>
+      <ion-item routerLink="/control-asistencia">Historial de Asistencia</ion-item>
+      <ion-item routerLink="/abrir-camara">Abrir cámara</ion-item>
+      <ion-item routerLink="/servicio-estudiante">Servicio al Estudiante</ion-item>
+      <ion-item routerLink="/mi-horario">Mi Horario</ion-item>
+      <ion-item (click)="cerrarSesion()">Cerrar sesión</ion-item>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenido principal -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>
+

@@ -1,0 +1,79 @@
+<ion-content [fullscreen]="true">
+  <div class="contenedor">
+
+    <ion-menu menuId="first-menu" contentId="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-item routerLink="/home">Inicio</ion-item>
+        <ion-item routerLink="/login">Cerrar sesión</ion-item>
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+          </ion-buttons>
+          <ion-title id="contres" style="width: fit-content; font-weight: 500;">RegistrApp</ion-title>
+          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" alt="Logo" routerLink="/credencial"></ion-icon>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="imagen">
+          <img src="assets/img/universitarios.png" alt="FondoInicio">
+        </div>
+
+        <div class="contenedorSec">
+          <h6>Mi horario</h6> 
+        </div>
+
+        <div class="table-container">
+          <div class="day">
+            <h6 class="textto">Lunes</h6>
+            <div class="schedule">
+              <p><strong>Calidad de Software</strong><br>08:30-10:30 / Sala 301</p>
+              <p><strong>Estadística Descriptiva</strong><br>10:40-12:10 / Sala 102</p>
+            </div>
+          </div>
+          <div class="day">
+            <h6 class="textto">Martes</h6>
+            <div class="schedule">
+              <p><strong>Programación Avanzada</strong><br>09:00-11:00 / Sala LPC1</p>
+              <p><strong>Ingeniería de Requisitos</strong><br>11:10-12:40 / Sala 305</p>
+            </div>
+          </div>
+          <div class="day">
+            <h6 class="textto">Miércoles</h6>
+            <div class="schedule">
+              <p><strong>Arquitectura de Software</strong><br>08:30-10:30 / Sala 202</p>
+              <p><strong>Ingeniería Económica</strong><br>10:40-12:10 / Sala 201</p>
+            </div>
+          </div>
+          <div class="day">
+            <h6 class="textto">Jueves</h6>
+            <div class="schedule">
+              <p><strong>Desarrollo Web</strong><br>09:00-11:00 / Sala 305</p>
+              <p><strong>Gestión de Proyectos</strong><br>11:10-12:40 / Sala LPC2</p>
+            </div>
+          </div>
+          <div class="day">
+            <h6 class="textto">Viernes</h6>
+            <div class="schedule">
+              <p><strong>Seguridad Informática</strong><br>08:30-10:30 / Sala LPC1</p>
+              <p><strong>Redes de Computadores</strong><br>10:40-12:10 / Sala 305</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>RegistrApp Todos los derechos</p>    
+        </div>
+      </ion-content>
+    </div>
+  </div>
+</ion-content>

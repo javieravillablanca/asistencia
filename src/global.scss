@@ -35,3 +35,23 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+    --ion-background-color: var(--fondo1);
+    --ion-toolbar-background: var(--fondo1);
+}
+
+.custom-toolbar {
+    --background: #710202; 
+    --color: white;        
+}
+
+.toolbar-container {
+    --background: #a10707;
+  
+}
+
+.button-inner {
+    --background: #000;
+
+}

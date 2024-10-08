@@ -8,9 +8,34 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'control-asistencia',
+    loadChildren: () => import('./control-asistencia/control-asistencia.module').then( m => m.ControlAsistenciaPageModule)
+  },
+  {
+    path: 'abrir-camara',
+    loadChildren: () => import('./abrir-camara/abrir-camara.module').then( m => m.AbrirCamaraPageModule)
+  },
+  {
+    path: 'servicio-estudiante',
+    loadChildren: () => import('./servicio-estudiante/servicio-estudiante.module').then( m => m.ServicioEstudiantePageModule)
+  },
+  {
+    path: 'mi-horario',
+    loadChildren: () => import('./mi-horario/mi-horario.module').then( m => m.MiHorarioPageModule)
+  },
+  {
+    path: 'recuperar-contra',
+    loadChildren: () => import('./recuperar-contra/recuperar-contra.module').then( m => m.RecuperarContraPageModule)
+  },
+ 
 ];
 
 @NgModule({
@@ -20,3 +45,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

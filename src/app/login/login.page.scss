@@ -1,0 +1,123 @@
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.contenedor {
+    min-height: 100vh;
+    background-image: var(--fondoimagen);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    padding: 20px;
+}
+
+.contenedorFondoSec {
+    margin-top: 35px;
+    background-color: var(--fondoseclogin);
+    margin: 0 10vw; 
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    height: auto; 
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-icon {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 2rem;
+    color: #ffff;
+}
+
+input {
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    width: 100%; 
+    max-width: 350px; 
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid var(--colorlinea);
+    background-color: var(--fondo-input);
+    color: darkgray;
+    margin-bottom: 15px;
+}
+
+button {
+    background: var(--boton1);
+    width: 100%; 
+    max-width: 350px;
+    border-radius: 5px;
+    text-align: center;
+    height: 2.5rem;
+    color: var(--texto-boton);
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+p, h1 {
+    color: var(--separador);
+    text-align: center;
+    margin-top: 20px;
+}
+
+#tema {
+    position: absolute;
+    right: 20px; 
+    top: 20px;
+    font-size: 1.5rem;
+    color: var(--tema);
+}
+
+h6 {
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+}
+
+.lineaSeparadora {
+    width: 70%;
+    border-bottom: 1px solid var(--colorlinea2);
+    margin: 10px auto;
+}
+
+.separador {
+    color: var(--separador);
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+    .contenedorFondoSec {
+        margin: 0 5vw; 
+        width: 90vw; 
+        max-width: none; 
+    }
+}

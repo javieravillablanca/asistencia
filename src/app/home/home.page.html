@@ -1,20 +1,59 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="contenedorPrincipal" [fullscreen]="true">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="contenedor">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- Menú lateral -->
+    <ion-menu menuId="first-menu" contentId="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-item routerLink="/home">Inicio</ion-item>
+        <ion-item routerLink="/login">Cerrar sesión</ion-item>
+      </ion-content>
+    </ion-menu>
+
+    
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar >
+          <ion-buttons slot="start">
+          
+            <ion-menu-button autoHide="false"></ion-menu-button>
+          </ion-buttons>
+          <ion-title id="contres" style="width: fit-content; font-weight: 500;">RegistrApp</ion-title>
+          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" alt="Logo" routerLink="/credencial"></ion-icon>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <img src="assets/img/universitarios.png" alt="FondoInicio">
+        
+        <div class="lineaSeparadora"><h6>Procesos Académicos</h6></div>
+
+       
+        <div class="imagenes">
+          <img src="assets/img/aistencia.jpg" routerLink="/control-asistencia" alt="imagenesDeInicio">
+          <img src="assets/img/camaracelu.jpg" routerLink="/abrir-camara" alt="imagenesDeInicio">
+          <p id="contenedorserv">Historial de Asistencia</p>
+          <p id="contenedorserv">Abrir Cámara</p>
+          <img src="assets/img/serv.png" routerLink="/servicio-estudiante" alt="imagenesDeInicio">
+          <img src="assets/img/horario.jpg" routerLink="/mi-horario" alt="imagenesDeInicio">
+          <p id="contenedorserv">Servicio al Estudiante</p>
+          <p id="contenedorserv">Mi horario</p>
+          
+        </div>
+        <div class="lineaSeparadora"></div>
+
+        
+        <div class="footer">
+          <p>RegistrApp Todos los derechos del autor.</p>
+        </div>
+      </ion-content>
+    </div>
+
   </div>
+
 </ion-content>
