@@ -14,6 +14,7 @@
   align-items: center;
   row-gap: 15px;
 }
+
 #container {
   text-align: center;
 
@@ -101,7 +102,6 @@ h6{
   justify-content: center;
   background-color: transparent;
   width: 100%;
-  margin: 20px;
   padding: 5px;
  
  
@@ -197,3 +197,6 @@ p{
   
 }
 
+.button-inner{
+  color: #fff !important;
+}

@@ -1,0 +1,63 @@
+<ion-content [fullscreen]="true" >
+  
+
+  
+  <div id="fondo">
+    <div class="contenedor">
+      <ion-icon src="/assets/icon/{{icono}}.svg" id="tema" (click) ="cambiarTema()"></ion-icon>
+      <img src="assets/logo/fondologo.png" alt="Logo" >
+      
+      
+      <div class="contenedorFondoSec">
+        
+        
+        
+        <div class="contenedorInputs">
+         
+          <div class="lineaSeparadora" style="color: #861313;"></div>
+          <p >Correo Eléctronico </p> 
+         
+          <input type="text" placeholder="juanito@gmail.com" [(ngModel)]="usuario" (blur)="animarError(0)" > 
+          <p >Contraseña</p>
+          <input type="password" placeholder="12345" [(ngModel)]="clave" (blur)="animarError(1)"> 
+          <div class="lineaSeparadora" style="color: #861313;"></div>
+          <button 
+            expand="block"
+            (click)="login()"
+            >
+            Ingresar
+          </button>
+          <button routerLink="/registro" class="button2">Crear Cuenta</button>
+            <div class="separador">
+             <p (click)="setOpen(true)">Olvidé mi contraseña</p>
+            </div>
+        </div>
+      </div>
+
+    </div>
+      
+  </div>
+</ion-content>
+<ion-modal [isOpen]="isModalOpen">
+  
+  <ng-template>
+    
+    <ion-content>
+      
+      <div class="contenedor">
+        <img  class="   imagenlogo" src="assets/logo/fondologo.png" alt="Logo" >
+        <div class="contenedorFondoSec2">
+          <div class="contenedorInputs2">   
+            <div class="lineaSeparadora" style="color: #861313;"></div>
+            <p >Correo Eléctronico </p>  
+            <input type="email" placeholder="juanito@gmail.com" [(ngModel)]="usuario">  
+            <div class="lineaSeparadora" style="color: #861313;"></div>
+            <button (click)="resetPass()">Enviar</button>
+            <button class="button2" (click)="setOpen(false)">Volver</button>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+

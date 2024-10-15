@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true" >
+  
+
+  
+  <div id="fondo">
+    <div class="contenedor">
+     
+      <img src="assets/logo/fondologo.png" alt="Logo" >
+      
+      
+      <div class="contenedorFondoSec">
+        
+        
+        
+        <div class="contenedorInputs">
+         
+          <div class="lineaSeparadora" style="color: #861313;"></div>
+          <p >Nombre: </p> 
+         
+          <input type="text" placeholder="juanito" [(ngModel)] ="nombre"> 
+          <p >Correo Institucional:</p>
+          <input type="text" placeholder="juanito@gmail.com"  [(ngModel)] ="correo"> 
+          <p >Contraseña:</p>
+          <input type="password" placeholder="12345" [(ngModel)] ="clave"> 
+         
+          <div class="lineaSeparadora" style="color: #861313;"></div>
+          <button (click)="crearcuenta()">
+            Guardar
+          </button>
+          <button routerLink="/login" class="button2">Volver Atrás</button>
+            <div class="separador">
+             
+            </div>
+        </div>
+      </div>
+
+    </div>
+      
+  </div>
+</ion-content>

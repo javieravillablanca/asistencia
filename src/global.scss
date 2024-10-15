@@ -39,6 +39,9 @@
 :root {
     --ion-background-color: var(--fondo1);
     --ion-toolbar-background: var(--fondo1);
+    --ion-toolbar-background: var(--fondoarriba);
+    --ion-color-primary: var(--colorbarra);
+    
 }
 
 .custom-toolbar {
@@ -50,6 +53,15 @@
     --background: #a10707;
   
 }
+.ion-item{
+    --background: #fff ;
+}
+
+.item-inner{
+    --background: #fff;
+}
+  
+
 
 .button-inner {
     --background: #000;

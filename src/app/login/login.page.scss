@@ -46,6 +46,30 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+
+.contenedorFondoSec2 {
+    margin-top: 35px;
+    background-color: var(--fondoseclogin);
+    margin: 0 10vw; 
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    height: auto; 
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 132px;
+    height: 40vh;
+}
+
 ion-icon {
     position: absolute;
     left: 20px;
@@ -64,7 +88,7 @@ input {
     text-align: center;
     border: 2px solid var(--colorlinea);
     background-color: var(--fondo-input);
-    color: darkgray;
+    
     margin-bottom: 15px;
 }
 
@@ -79,6 +103,20 @@ button {
     font-size: 1.2rem;
     margin-top: 20px;
 }
+
+
+.button2{
+    background: var(--button2);
+    width: 100%; 
+    max-width: 350px;
+    border-radius: 5px;
+    text-align: center;
+    height: 2.5rem;
+    color: var(--texto-boton);
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
 
 p, h1 {
     color: var(--separador);
@@ -120,4 +158,14 @@ h6 {
         width: 90vw; 
         max-width: none; 
     }
+}
+
+.contenedorInputs2{
+    position: relative;
+    bottom: 8vh;
+}
+
+.imagenlogo{
+    position: relative;
+    bottom: 30px;
 }

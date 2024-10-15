@@ -60,7 +60,19 @@ table {
     margin: 2vh 0;
     text-align: center;
     margin-left: 20px;
+    
+     
+      
 }
+
+@media only screen and (max-width: 600px) {
+    table {
+      
+      margin: 5vw; 
+        width: 90vw; 
+        max-width: none; 
+    }
+}  
 
 th {
     border: 1px solid #000 !important; 
