@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController,NavController  } from '@ionic/angular';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ModalPerfilPage } from '../modal-perfil/modal-perfil.page';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-servicio-estudiante',
@@ -11,7 +13,8 @@ import { filter } from 'rxjs/operators';
 export class ServicioEstudiantePage implements OnInit {
 
   constructor(private menuCtrl: MenuController,
-    private router: Router
+    private router: Router,
+    public modalController: ModalController
   ) { }
   openFirstMenu() {
     
@@ -25,4 +28,13 @@ export class ServicioEstudiantePage implements OnInit {
     this.menuCtrl.close(); // Cierra el menú cuando la navegación termina
   });
 }
+
+async openModal() {
+  const modal = await this.modalController.create({
+    component: ModalPerfilPage,
+  });
+  return await modal.present();
+}
+
+
 }

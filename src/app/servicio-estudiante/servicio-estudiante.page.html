@@ -24,7 +24,7 @@
           </ion-buttons>
           <ion-title id="contres" style="width: fit-content; font-weight: 500;">RegistrApp</ion-title>
           
-          <ion-icon slot="end"  id="logoopc" src="/assets/icon/user.svg" alt="Logo" routerLink="/credencial"></ion-icon>
+          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" (click)="openModal()" alt="Logo" ></ion-icon>
           
         </ion-toolbar>
       </ion-header>
@@ -51,8 +51,6 @@
                 <option value="categoria2">Financiamiento</option>
             </select>
         
-            <label for="servicio">Servicio:</label>
-            <input type="text" id="servicio" name="servicio" required>
         
             <label for="comentarios">Comentarios (máximo 1000 caracteres):</label>
             <textarea id="comentarios" name="comentarios" maxlength="1000" rows="5" required></textarea>

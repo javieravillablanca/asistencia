@@ -1,40 +1,37 @@
-<ion-content [fullscreen]="true" >
-  
-
-  
+<ion-content [fullscreen]="true">
   <div id="fondo">
     <div class="contenedor">
-     
-      <img src="assets/logo/fondologo.png" alt="Logo" >
-      
-      
+      <img src="assets/logo/fondologo.png" alt="Logo">
+
       <div class="contenedorFondoSec">
-        
-        
-        
         <div class="contenedorInputs">
-         
           <div class="lineaSeparadora" style="color: #861313;"></div>
-          <p >Nombre: </p> 
-         
-          <input type="text" placeholder="juanito" [(ngModel)] ="nombre"> 
-          <p >Correo Institucional:</p>
-          <input type="text" placeholder="juanito@gmail.com"  [(ngModel)] ="correo"> 
-          <p >Contraseña:</p>
-          <input type="password" placeholder="12345" [(ngModel)] ="clave"> 
-         
+          
+          <p>Nombre y Apellido:</p>
+          <input type="text" placeholder="Juanito" [(ngModel)]="nombre" 
+                 (ngModelChange)="validarCampos()">
+          <div *ngIf="mensajeError && mensajeError.includes('nombre')" style="color: red;">{{ mensajeError }}</div>
+
+          
+
+          <p>Correo Electronico:</p>
+          <input type="text" placeholder="juanito@gmail.com" [(ngModel)]="correo" 
+                 (ngModelChange)="validarCampos()">
+          <div *ngIf="mensajeError && mensajeError.includes('correo')" style="color: red;">{{ mensajeError }}</div>
+
+          <p>Contraseña:</p>
+          <input type="password" placeholder="12345" [(ngModel)]="clave" 
+                 (ngModelChange)="validarCampos()">
+          <div *ngIf="mensajeError && mensajeError.includes('clave')" style="color: red;">{{ mensajeError }}</div>
+          
           <div class="lineaSeparadora" style="color: #861313;"></div>
           <button (click)="crearcuenta()">
             Guardar
           </button>
           <button routerLink="/login" class="button2">Volver Atrás</button>
-            <div class="separador">
-             
-            </div>
+          <div class="separador"></div>
         </div>
       </div>
-
     </div>
-      
   </div>
 </ion-content>

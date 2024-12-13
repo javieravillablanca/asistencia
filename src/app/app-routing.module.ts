@@ -39,6 +39,15 @@ const routes: Routes = [
     path: 'registro',
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
+  {
+    path: 'modal-perfil',
+    loadChildren: () => import('./modal-perfil/modal-perfil.module').then( m => m.ModalPerfilPageModule)
+  },
+  {
+    path: 'recuperar-contra',
+    loadChildren: () => import('./recuperar-contra/recuperar-contra.module').then( m => m.RecuperarContraPageModule)
+  },
+  
  
 ];
 

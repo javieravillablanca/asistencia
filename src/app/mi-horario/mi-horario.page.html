@@ -1,6 +1,5 @@
 <ion-content [fullscreen]="true">
   <div class="contenedor">
-
     <ion-menu menuId="first-menu" contentId="main-content">
       <ion-header>
         <ion-toolbar>
@@ -20,16 +19,17 @@
             <ion-menu-button autoHide="false"></ion-menu-button>
           </ion-buttons>
           <ion-title id="contres" style="width: fit-content; font-weight: 500;">RegistrApp</ion-title>
-          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" alt="Logo" routerLink="/credencial"></ion-icon>
+          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" (click)="openModal()" alt="Logo"></ion-icon>
         </ion-toolbar>
       </ion-header>
+
       <ion-content>
         <div class="imagen">
           <img src="assets/img/universitarios.png" alt="FondoInicio">
         </div>
 
         <div class="contenedorSec">
-          <h6>Mi horario</h6> 
+          <h6>Mi horario</h6>
         </div>
 
         <div class="table-container">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="footer">
-          <p>RegistrApp Todos los derechos</p>    
+          <p>RegistrApp Todos los derechos</p>
         </div>
       </ion-content>
     </div>

@@ -20,7 +20,7 @@
             <ion-menu-button autoHide="false"></ion-menu-button>
           </ion-buttons>
           <ion-title id="contres" style="width: fit-content; font-weight: 500;"> RegistrApp</ion-title>
-          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" alt="Logo" routerLink="/credencial"></ion-icon>         
+          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" (click)="openModal()" alt="Logo" ></ion-icon>         
         </ion-toolbar>
       </ion-header>
       <ion-content>
@@ -41,7 +41,7 @@
           
           
           <div class="cuadro">
-            <h4 (click)="scan()">¡Abrir cámara para registrar asistencia!.</h4>
+            <h4 (click)="scan()">¡Abrir cámara para registrar asistencia!</h4>
             <div class="lineaSeparadora3"></div>
             <img (click)="scan()" src="assets/img/camaracodigo.png" alt="FondoInicio" class="imagen-encima">
           </div>

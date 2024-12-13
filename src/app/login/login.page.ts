@@ -40,17 +40,35 @@ export class LoginPage implements OnInit {
   login() {
     for (let item of this.usuarios) {
       if (this.usuario === item.correo && this.clave === item.clave) {
-        // Mostrar alerta de éxito
-        this.alerta("Acceso Autorizado", "¡Datos correctos! Ingresando...", () => {
+        
+        this.alerta("Acceso Autorizado", "¡Bienvenido a RegistrApp!", () => {
           let extras: NavigationExtras = { state: { usuario: this.usuario } };
-          localStorage.setItem("usuario", JSON.stringify(item));
-          this.router.navigate(['/home'], extras);
+          localStorage.setItem("usuario", JSON.stringify(item)); 
+          this.router.navigate(['/home'], extras); 
         });
         return;
       }
     }
   
     this.alerta("Acceso Denegado", "Datos incorrectos!", () => {});
+  }
+
+
+
+  recuperarContra() {
+    for (let item of this.usuarios) {
+      if (this.usuario === item.correo ) {
+        
+        this.alerta("Favor de revisar su Correo", "¡Nueva Contraseña, generada con éxito!", () => {
+          let extras: NavigationExtras = { state: { usuario: this.usuario } };
+          localStorage.setItem("usuario", JSON.stringify(item)); 
+          this.router.navigate(['/login'], extras); 
+        });
+        return;
+      }
+    }
+  
+    this.alerta("Acceso Denegado", "No existe el correo ingresado!.", () => {});
   }
 
 
@@ -90,24 +108,22 @@ export class LoginPage implements OnInit {
       document.documentElement.style.setProperty("--separador", "#000")
       document.documentElement.style.setProperty("--fondosec", "#004d95")
       document.documentElement.style.setProperty("--th", "#ac0404")
-      document.documentElement.style.setProperty("--conten2", "#a20707")
+      document.documentElement.style.setProperty("--conten2", "#710202")
       document.documentElement.style.setProperty("--labels", "#000")
       document.documentElement.style.setProperty("--inputc", "#000")
-      document.documentElement.style.setProperty("--colorfondotabla", "#a20707")
+      document.documentElement.style.setProperty("--colorfondotabla", "#710202")
       document.documentElement.style.setProperty("--dayh6", "#333")
       document.documentElement.style.setProperty("--scechule", "#333")
       document.documentElement.style.setProperty("--colorlinea2", "#900000")
-      document.documentElement.style.setProperty("--colorcuadrocam", "#910505")
+      document.documentElement.style.setProperty("--colorcuadrocam", "#710202")
       document.documentElement.style.setProperty("--lin", "#890303")
       document.documentElement.style.setProperty("--button2", "#67626291")
-      document.documentElement.style.setProperty("--ion-item-color", "#000")
-      document.documentElement.style.setProperty("--ion-toolbar-border-color", "#710202")
-      document.documentElement.style.setProperty("--ion-border-color", "#710202")
-      document.documentElement.style.setProperty("--ion-toolbar-background", "#710202")
-      document.documentElement.style.setProperty("--ion-color-step-50", "#a10707")
-      document.documentElement.style.setProperty("--ion-background-color-step-50", "#a10707")
-      document.documentElement.style.setProperty("--background", "#a10707")
-      document.documentElement.style.setProperty("--colorbarra", "#c3bdbd")
+      document.documentElement.style.setProperty("--fondoarriba", "#710202")
+      document.documentElement.style.setProperty("--colorbarra", "#e1d4d4")
+      document.documentElement.style.setProperty("--colormenuletras", "#000")
+      document.documentElement.style.setProperty("--ion-item-border-color", "#999393")
+      document.documentElement.style.setProperty("--colorperfilcuadro1", " #710202")
+      document.documentElement.style.setProperty("--colormenu", " #710202")
  
      
 
@@ -141,13 +157,19 @@ export class LoginPage implements OnInit {
       document.documentElement.style.setProperty("--colorcuadrocam", "#2e3239")
       document.documentElement.style.setProperty("--lin", "#fff")
       document.documentElement.style.setProperty("--button2", "#34303091")
-      document.documentElement.style.setProperty("--ion-item-color", "#fff")
+     
       document.documentElement.style.setProperty("--ion-border-color", "#000")
-      document.documentElement.style.setProperty("--ion-toolbar-background", "#000")
+      document.documentElement.style.setProperty("--fondoarriba", "#000")
       document.documentElement.style.setProperty("--ion-color-step-50", "#000")
       document.documentElement.style.setProperty("--ion-background-color-step-50", "#000")
       document.documentElement.style.setProperty("--background", "#000")
       document.documentElement.style.setProperty("--colorbarra", "#c3bdbd")
+      document.documentElement.style.setProperty("--colormenuletras", "#fff")
+      document.documentElement.style.setProperty("--lineasmenu", "#fff")
+      document.documentElement.style.setProperty("--ion-item-border-color", "#fff")
+      document.documentElement.style.setProperty("--colorperfilcuadro1", " #2e3239")
+      document.documentElement.style.setProperty("--colormenu", " #2e3239")
+      
      
       this.icono = "claro"
     }
@@ -159,28 +181,40 @@ export class LoginPage implements OnInit {
   ).subscribe(() => {
     this.menuCtrl.close(); 
   });
-  if(localStorage.getItem("usuarios")){
-    this.usuarios = JSON.parse(localStorage.getItem("usuarios")!)
-  }
+  this.animarLogo();
 }
 
-
-
-  animarLogo() {
-    const logo = document.querySelector('#tema');
-    if (logo) {
-      this.anim.create()
-        .addElement(logo)
-        .duration(2000)
-        .iterations(Infinity) 
-        .keyframes([
-          { offset: 0, transform: 'scale(1)', opacity: '1' },
-          { offset: 0.5, transform: 'scale(1.1)', opacity: '0.8' },
-          { offset: 1, transform: 'scale(1)', opacity: '1' }
-        ])
-        .play();
+    ionViewWillEnter() {
+      const usuariosData = localStorage.getItem("usuarios");
+      if (usuariosData) {
+        this.usuarios = JSON.parse(usuariosData);
+      } else {
+        console.log("No hay usuarios almacenados.");
+      }
     }
+
+    animarLogo() { 
+      const logo = document.querySelector('#tema');
+      if (logo) {
+          const animation = this.anim.create()
+              .addElement(logo)
+              .duration(2000)
+              .iterations(Infinity) 
+              .keyframes([
+                  { offset: 0, transform: 'scale(1) rotate(0deg)', opacity: '1' },
+                  { offset: 0.5, transform: 'scale(1.1) rotate(10deg)', opacity: '0.8' },
+                  { offset: 1, transform: 'scale(1) rotate(0deg)', opacity: '1' }
+              ]);
+          animation.play();
+      } else {
+          console.error('Logo not found');
+      }
   }
+
+
+
+  
+  
   
 
   animarError(index:number){

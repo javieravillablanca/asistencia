@@ -1,7 +1,5 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"> 
   <div class="contenedor">
-
-    
     <ion-menu menuId="first-menu" contentId="main-content">
       <ion-header>
         <ion-toolbar>
@@ -14,19 +12,16 @@
       </ion-content>
     </ion-menu>
 
-    
     <div class="ion-page" id="main-content">
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            
             <ion-menu-button autoHide="false"></ion-menu-button>
           </ion-buttons>
           <ion-title id="contres" style="width: fit-content; font-weight: 500;">
-            
             RegistrApp
           </ion-title>
-          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" alt="Logo" routerLink="/credencial"></ion-icon>
+          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" (click)="openModal()" alt="Logo"></ion-icon>
         </ion-toolbar>
       </ion-header>
 
@@ -36,77 +31,35 @@
         </div>
 
         <div class="contenedorSec">
-          
           <h6>INGENIERIA EN INFORMATICA</h6>
           <div class="lineaSeparadora"></div>
-          
         </div>
 
-
         <div class="contenedorTabla">
-          
           <table>
             <thead>
               <tr>
                 <th>Asignatura</th>
-                <th>ID</th>
+                <th>Docente</th>
                 <th>Hora</th>
                 <th>Fecha</th>
               </tr>
             </thead>
-            <tbody> 
-              <tr>
-                <td>Base de datos</td>
-                <td>SY323</td>  
-                <td>17:51</td>
-                <td>07/10/2024</td> 
+            <tbody>
+              <tr *ngFor="let asistencia of asistencias">
+                <td *ngIf="asistencia.alumno==user.nombre">{{ asistencia.ramo }}</td>
+                <td *ngIf="asistencia.alumno==user.nombre">{{ asistencia.docente }}</td>
+                <td *ngIf="asistencia.alumno==user.nombre">{{ asistencia.hora_inicio }}</td>
+                <td *ngIf="asistencia.alumno==user.nombre">{{ asistencia.hora | date:'dd/MM/yyyy HH:mm' }}</td>
+               
               </tr>
-              <tr>
-                <td>Estadística Descriptiva</td>
-                <td>EST65</td>  
-                <td>19:10</td>
-                <td>07/10/2024</td> 
-              </tr>
-              <tr>
-                <td>Inglés Intermedio</td>
-                <td>INU78</td>  
-                <td>08:30</td>
-                <td>08/10/2024</td> 
-              </tr>
-              <tr>
-                <td>Calidad de Software</td>
-                <td>CL626</td>  
-                <td>10:30</td>
-                <td>08/10/2024</td>
-              </tr>
-              <tr>
-                <td>Inglés Intermedio</td>
-                <td>INUY3</td>  
-                <td>12:20</td>
-                <td>08/10/2024</td>
-              </tr>
-              <tr>
-                <td>Programación Web</td>
-                <td>PRG82</td>  
-                <td>08:32</td>
-                <td>09/10/2024</td>
-              </tr>
-              <tr>
-                <td>Arquitectura</td>
-                <td>ARQ627</td>  
-                <td>10:20</td>
-                <td>09/10/2024</td>
-              </tr>
-              
-              
-              
               
             </tbody>
           </table>
         </div>
 
         <div class="footer">
-          <p>RegistrApp Todos los derechos</p>    
+          <p>RegistrApp Todos los derechos</p>
         </div>
 
       </ion-content>

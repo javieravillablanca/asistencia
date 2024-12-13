@@ -1,0 +1,85 @@
+.perfil-cuadro {
+    background-color: var(--colorperfilcuadro1); 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin: 16px; 
+    color: white; 
+  }
+
+  .perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+
+  .logo-usuario {
+    margin-bottom: 16px;
+  }
+
+  .nombre-usuario {
+    font-size: 24px; /* Tamaño de la fuente */
+    margin: 4px 0;
+  }
+
+  .rut-usuario {
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    margin: 4px 0;
+  }
+
+  .info-carrera {
+    border: 1px solid white; /* Borde blanco */
+    padding: 10px;
+    margin-top: 16px;
+    width: 80%; /* Ajustar el ancho */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente para el cuadro */
+  }
+
+  .info-text {
+    color: #fff; /* Texto blanco */
+  }
+
+  .linea-separadora {
+    width: 100%;
+    height: 1px;
+    background-color: white; /* Color blanco para la línea separadora */
+    margin: 8px 0; /* Espacio arriba y abajo de la línea */
+  }
+
+  .icono-carrera {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .carrera-text {
+    font-size: 18px; /* Tamaño del texto del ícono */
+    color: white; /* Color blanco */
+  }
+
+  .qr-code {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+#logo-usuario{
+    color: #fff;
+}
+
+.perfil-info-cuadro {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 16px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    margin-bottom: 16px; /* Margen inferior para separarlo del resto */
+    color: white; /* Color del texto dentro del cuadro */
+    display: flex; /* Para alinear el contenido */
+    flex-direction: column; /* Para apilar el contenido */
+    align-items: center; /* Centrar el contenido horizontalmente */
+    text-align: center; /* Centrar el texto */
+    border-radius: 8px;
+    border: 1px solid white;
+  }
+  

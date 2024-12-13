@@ -14,4 +14,8 @@ describe('ControlAsistenciaPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('loadUser', () => {
+    
+    expect(component).toBeTruthy();
+  });
 });

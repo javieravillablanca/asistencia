@@ -4,7 +4,7 @@
   
   <div id="fondo">
     <div class="contenedor">
-      <ion-icon src="/assets/icon/{{icono}}.svg" id="tema" (click) ="cambiarTema()"></ion-icon>
+      <ion-icon src="/assets/icon/{{icono}}.svg" id="tema" (click)="cambiarTema() ; animarLogo()"></ion-icon>
       <img src="assets/logo/fondologo.png" alt="Logo" >
       
       
@@ -52,7 +52,7 @@
             <p >Correo Eléctronico </p>  
             <input type="email" placeholder="juanito@gmail.com" [(ngModel)]="usuario">  
             <div class="lineaSeparadora" style="color: #861313;"></div>
-            <button (click)="resetPass()">Enviar</button>
+            <button (click)="resetPass(); recuperarContra() ">Enviar</button>
             <button class="button2" (click)="setOpen(false)">Volver</button>
           </div>
         </div>

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="perfil-cuadro">
+    <div class="perfil-container">
+
+      
+      <div class="perfil-info-cuadro">
+        <div class="logo-usuario">
+          <ion-icon slot="end" id="logoopc" src="/assets/icon/user.svg" alt="Logo Usuario" style="width: 100px; height: 100px;"></ion-icon>
+        </div>
+        <h2 class="nombre-usuario">{{ usuario.nombre }}</h2>
+        
+        <div class="linea-separadora"></div>
+        
+        <div class="icono-carrera">
+          <p class="carrera-text">Ingeniería en Informática</p>
+          
+        </div>
+      </div>
+     
+
+      <div class="linea-separadora"></div>
+
+      <div class="info-carrera">
+        <p>Universidad/Instituto: <span class="info-text"> DuocUc.</span></p>
+        <p>Sede: <span class="info-text"> Santiago, Chile.</span></p>
+      </div>
+
+      <div class="linea-separadora"></div>
+
+      <div class="qr-code">
+        <img src="assets/img/futuro-codigo-de-barras.png" alt="Código QR" />
+      </div>
+    </div>
+  </div>
+</ion-content>
